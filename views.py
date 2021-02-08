@@ -13,4 +13,5 @@ def about_view(request):
 
 
 def contacts_view(request):
-    return '200 OK', render('contacts.html')
+    contacts_list = request.get('contacts_list', None)
+    return '200 OK', render('contacts.html', contacts_list_page=contacts_list)
