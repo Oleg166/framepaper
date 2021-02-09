@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+.one{
+    width: 800px;
+    background-color: cadetblue;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 35px;
+}
+.two input{
+    height: 50px;
+    display: inline-block;
+    /*font: 27px sans-serif;*/
+    font-size:100%;
+}
+.three{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+.two{
+    clear:both; 
+    text-align:right;
+}
+input[type=submit]{
+    background-color: chocolate;
+    height: 50px;
+    width:210px;
+    font-size:100%;
+}
