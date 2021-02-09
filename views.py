@@ -21,10 +21,10 @@ def feedback_view(request):
     # Проверка метода запроса
     if request['method'] == 'POST':
         data = request['data']
-        first_name = request['first_name']
-        telephone = request['telephone']
-        email = request['email']
-        text = request['text']
+        first_name = data['first_name']
+        telephone = data['telephone']
+        email = data['email']
+        text = data['text']
         print(f'Нам пришло сообщение от {first_name} (тел.: {telephone}, e-mail: {email}) с текстом "{text}".')
         return '200 OK', render('feedback.html')
     else:
