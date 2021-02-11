@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}
+    Контакты
+{% endblock %}
+{% block body %}
     <h1>Контакты</h1>
     <h2>Contacts: {{contacts_list_page}}</h2>
-</body>
-</html>
+{% endblock %}
