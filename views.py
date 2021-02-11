@@ -9,7 +9,7 @@ def main_view(request):
 
 def about_view(request):
     # Просто возвращаем текст
-    return '200 OK', "About"
+    return '200 OK', render('about.html')
 
 
 def contacts_view(request):
