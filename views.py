@@ -15,3 +15,17 @@ def about_view(request):
 def contacts_view(request):
     contacts_list = request.get('contacts_list', None)
     return '200 OK', render('contacts.html', contacts_list_page=contacts_list)
+
+
+def feedback_view(request):
+    # Проверка метода запроса
+    if request['method'] == 'POST':
+        data = request['data']
+        first_name = data['first_name']
+        telephone = data['telephone']
+        email = data['email']
+        text = data['text']
+        print(f'Нам пришло сообщение от {first_name} (тел.: {telephone}, e-mail: {email}) с текстом "{text}".')
+        return '200 OK', render('feedback.html')
+    else:
+        return '200 OK', render('feedback.html')
