@@ -1,5 +1,12 @@
 class Application:
 
+    def add_route(self, url):
+        # паттерн декоратор
+        def inner(view):
+            self.urlpatterns[url] = view
+
+        return inner
+
     def parse_accept_data(self, data: str):
         result = {}
         if data:
